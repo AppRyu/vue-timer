@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div>
+		<Clock class="clock" location="TOKYO" :diff="0" />
+		<Clock class="clock" location="NY" :diff="-14" />
+		<Clock class="clock" location="LA" :diff="-17" />
+		<Clock class="clock" location="UK" :diff="-9" />
+		<Clock class="clock" location="BRAZIL" :diff="-12" />
+		<Clock class="clock" location="SYDNEY" :diff="1" />
+		<Clock class="clock" location="DUBAI" :diff="-5" />
+		<Clock class="clock" location="JOHANNESBURG" :diff="-7" />
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Clock from './components/Clock.vue';
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+	components: {
+		Clock,
+	},
+};
 </script>
 
+<style scoped>
+.clock {
+	width: 80%;
+	max-width: 500px;
+	margin: 30px auto;
+}
+</style>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
 }
 </style>
